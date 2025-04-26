@@ -4,9 +4,9 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
 
 const BlogDetails = () => {
-  const { id } = useParams();  // Dynamic ID from the URL
+  const { id } = useParams(); 
   const [blog, setBlog] = useState(null);
-  const [error, setError] = useState(null);  // Initialize error state
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     async function fetchBlog() {

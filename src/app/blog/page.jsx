@@ -11,6 +11,7 @@ const Page = () => {
       try {
         const response = await fetch("https://blogs-app-backend-itdk.onrender.com/api/blogs");
         const data = await response.json();
+        console.log(data)
         setList(data);
       } catch (error) {
         console.error("Error fetching blogs:", error);
