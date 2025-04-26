@@ -1,0 +1,79 @@
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --border-color: #d1d5db; /* Light gray for borders */
+  --primary-color: #000000;
+  --secondary-color: #666666;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --border-color: #333333; /* Dark border */
+    --primary-color: #ffffff;
+    --secondary-color: #aaaaaa;
+  }
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', 'Arial', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+input, textarea {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: var(--background);
+  color: var(--foreground);
+  outline: none;
+}
+
+input:focus, textarea:focus {
+  border-color: var(--primary-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
